@@ -1,0 +1,33 @@
+{% set title = title|default('Robert Wesner') %}
+{% set description = description|default('Robert Wesner, software developer') %}
+<title>{{ title }}</title>
+{# <META> #}
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ description }}">
+<meta name="keywords" content="Robert, Wesner{% for keyword in keywords|default([]) %}, {{ keyword }}{% endfor %}">
+<meta name="robots" content="index, follow">
+<link rel="author" href="https://github.com/RobertWesner/" />
+<link rel="canonical" href="https://robert.wesner.io{{ server.uri }}" />
+{# </META> #}
+{# <OG> #}
+<meta property="og:title" content="{{ title }}">
+<meta property=“og:description“ content="{{ description }}">
+{% if image|default(null) %}
+<meta property="og:image" content="/{{ image }}">
+{% endif %}
+<meta property="og:url" content="https://robert.wesner.io{{ server.uri }}">
+<meta property="og:site_name" content="robert.wesner.io">
+<meta property="og:type" content="website">
+{# </OG> #}
+{# <Twitter> #}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
+{% if image|default(null) %}
+    <meta name="twitter:image" content="/{{ image }}">
+{% endif %}
+<meta name="twitter:url" content="https://robert.wesner.io{{ server.uri }}">
+{# </Twitter> #}
+<link rel="stylesheet" href="/css/theme.css">
