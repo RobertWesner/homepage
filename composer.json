@@ -1,5 +1,5 @@
 {
-    "name": "robertwesner/scripts.yt",
+    "name": "robertwesner/homepage",
     "description": "",
     "type": "project",
     "license": "proprietary",
@@ -16,10 +16,12 @@
     ],
     "require": {
         "php": "^8.4",
-        "robertwesner/simple-mvc-php": "^v0.5.0"
+        "robertwesner/simple-mvc-php": "^v0.10.3"
     },
     "replace": {
         "symfony/polyfill-php80": "*",
-        "symfony/polyfill-php81": "*"
+        "symfony/polyfill-php82": "*",
+        "symfony/polyfill-php83": "*",
+        "symfony/polyfill-php84": "*"
     }
 }
