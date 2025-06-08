@@ -114,10 +114,6 @@ a {
         justify-content: start;
     }
 
-    .screen:nth-of-type(2) {
-        padding: 0;
-    }
-
     .screen:nth-of-type(2) > main {
         border-radius: 0;
     }

@@ -2,11 +2,96 @@
 <html lang="en">
     <head>
         {% include 'base/head.twig' with { title: 'Robert Wesner - Projects' } %}
-        <link rel="stylesheet" href="/css/view/projects.css">
+        <link rel="stylesheet" href="/css/view/projects.css?1">
     </head>
     <body>
         <main class="screen">
-            Here is where the projects would be, currently in development
+            <h1>Projects</h1>
+            {% for project in [
+                {
+                    name: 'YouTube Userscripts',
+                    description: '
+                        <p>
+                            Currently, I actively develop and maintain a few useful userscripts for YouTube web.
+                            The most popular of these scripts is <a href="https://scripts.yt/scripts/ytpa-youtube-play-all-YTPA-Play-All-YouTube-Videos-Of-A-Channel">YTPA (YouTube Play All)</a>
+                            which adds the long lost "Play All" button back to where it once was.
+                            It lets you, as the name implies, play all videos of a channel but also plays shorts, streams, by popular and more.
+                        </p>
+                        <p>All of these userscripts are available on <a href="https://scripts.yt" aria-label="scripts dot Y T">scripts.yt</a>.
+                        <p>Feel free to contribute or open issues if you have improvements in mind!</p>
+                    ',
+                    image: '/img/projects/scriptsyt.png',
+                },
+                {
+                    name: 'Simple Model-View-Controller PHP',
+                    description: '
+                        <p>
+                            Simple MVC was a small Project intended for serving semi-static content via Twig.
+                            It now turned into a more complete defacto framework with proper <a href="https://github.com/RobertWesner/dependency-injection">dependency injection</a> autowiring
+                            and a small set of bundle extensions.
+                        </p>
+                        <p>The routing took some syntactic inspiration from Laravel</p>
+                        <p>Fun fact: this website and plenty of my other web projects actively run based on this.</p>
+                        <p>It is still early in development and far from a complete ecosystem like Symfony or Laravel, but is more capable than initially intended.</p>
+                        <p>Take a gander at the <a href="https://github.com/RobertWesner/simple-mvc-php">simple MVC GitHub project</a>.</p>
+                    ',
+                    image: '/img/projects/mvc.png',
+                },
+                {
+                    name: 'Nonogram.me',
+                    nameAria: 'Nonogram dot M E',
+                    description: '
+                        <p><a href="https://nonogram.me">My own nonogram web app</a> is currently in development.</p>
+                        <p>
+                            Anyone can upload their own creations which will then be held for review and later approved.
+                            It still lacks solvability calculation for submission verification which I previously implemented in a limited way
+                            but was very computationally expensive and didnt cover hard to solve nonograms so I needed to scrap it.
+                        </p>
+                        <p>Disclaimer: not all nonograms are solvable and will be cleaned up in the future.</p>
+                        <p>Development is currently slow and not prioritized. Sorry for the inconvenience!</p>
+                    ',
+                    image: '/img/projects/nonogramme.png',
+                },
+                {
+                    name: 'TITRYES',
+                    description: '
+                        <p>
+                            Pronounced tie-tree-yes, <a href="https://github.com/RobertWesner/titryes"><strong>this is the reason you encrypt stuff</strong></a>.
+                            The project copies and runs browsers from any unencrypted or successfully unlocked drive.
+                        </p>
+                        <p>It is written in Ruby and easily shows the importance of full disk encryption.</p>
+                        <p>
+                            All browsers are run in Docker containers without modifying the original browser profiles.
+                            Any bootable Linux distribution with Docker can thus be plugged into a vulnerable device and exploit the lack of encryption.
+                        </p>
+                    ',
+                    image: '/img/projects/titryes.png',
+                },
+                {
+                    name: 'AWDY',
+                    nameAria: 'awdy',
+                    description: '
+                        <p><a href="https://github.com/RobertWesner/awdy">AWDY</a> is a tiny but extensible library for creating full terminal progress bars with logging in PHP.</p>
+                        <p>I created it to monitor a few one time data processing tasks that ran for multiple days and had steps which individually took more than a second.</p>
+                        <p>
+                            The library is somewhat optimized for performance by limiting outputs and only rewriting certain sections rather than doing full prints.
+                            It is only compatible with Linux (and possibly MacOS though that is not tested) due to how the output is formatted via ANSI escape sequences.
+                        </p>
+                    ',
+                    image: '/img/projects/awdy.gif',
+                },
+            ] %}
+                <section class="project">
+                    <article class="content">
+                        <h2 {% if project.nameAria %}aria-description="{{ project.nameAria }}"{% endif %}>{{ project.name }}</h2>
+                        {{ project.description|raw }}
+                    </article>
+                    <div class="thumbnail">
+                        <img src="{{ project.image }}" alt="">
+                    </div>
+                </section>
+            {% endfor %}
         </main>
+        {% include 'base/navigation.twig' %}
     </body>
 </html>

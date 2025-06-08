@@ -1,5 +1,6 @@
 @import '/font/montserrat/Montserrat.css';
 @import '/node_modules/@fortawesome/fontawesome-free/css/all.css';
+@import 'navigation.css';
 
 * {
     box-sizing: border-box;
@@ -26,4 +27,10 @@ a, a:visited, a:hover {
 
 .center {
     margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .screen {
+        padding: 0 !important;
+    }
 }

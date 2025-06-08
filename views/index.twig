@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         {% include 'base/head.twig' with { title: 'Robert Wesner - Home' } %}
-        <link rel="stylesheet" href="/css/view/index.css">
+        <link rel="stylesheet" href="/css/view/index.css?1">
     </head>
     <body>
         <div id="content">
@@ -10,7 +10,7 @@
                 <div>
                     <img src="/img/face.png" alt="">
                     <h1>
-                        Robert Wesner<br><small><span aria-hidden="true">Fachinformatiker /</span> Software developer</small>
+                        Robert Wesner<br><small><span aria-hidden="true">Fachinformatiker / </span>Software developer</small>
                     </h1>
                 </div>
             </div>
@@ -19,7 +19,7 @@
                     <section>
                         <h2>About me</h2>
                         <p>
-                            Hello there! I'm Robert, a full-time back-end developer living in germany.
+                            Hello there! I'm Robert, a full time back end developer and clean code enthusiast living in germany.
                         </p>
                         <p>
                             This is the home of my internet presence and lets you access my projects and activity on the web.
@@ -38,7 +38,7 @@
                         </p>
                         <p>
                             My language of choice is PHP 8+, though I do work with Java professionally as well.
-                            Despite being mainly a back-end engineer, I also handle some front-end work with Javascript and Typescript.
+                            Despite being mainly a back end engineer, I also handle some front end work with Javascript and Typescript.
                             In my spare time I am familiarizing myself with Go, Kotlin, and Ruby.
                         </p>
                     </section>
@@ -84,5 +84,6 @@
                 </span>
             </a>
         </aside>
+        {% include 'base/navigation.twig' %}
     </body>
 </html>
