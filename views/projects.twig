@@ -84,7 +84,7 @@
             ] %}
                 <section class="project">
                     <article class="content">
-                        <h2 {% if project.nameAria %}aria-description="{{ project.nameAria }}"{% endif %}>{{ project.name }}</h2>
+                        <h2 {% if project.nameAria %}aria-label="{{ project.nameAria }}"{% endif %}>{{ project.name }}</h2>
                         {{ project.description|raw }}
                     </article>
                     <div class="thumbnail">
