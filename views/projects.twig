@@ -2,9 +2,10 @@
 <html lang="en">
     <head>
         {% include 'base/head.twig' with { title: 'Robert Wesner - Projects' } %}
-        <link rel="stylesheet" href="/css/view/projects.css?1">
+        <link rel="stylesheet" href="/css/view/projects.css?2">
     </head>
     <body>
+    {% include 'base/navigation.twig' with { current: 'projects' } %}
         <main class="screen">
             <h1>Projects</h1>
             {% for project in [
@@ -17,7 +18,7 @@
                             which adds the long lost "Play All" button back to where it once was.
                             It lets you, as the name implies, play all videos of a channel but also plays shorts, streams, by popular and more.
                         </p>
-                        <p>All of these userscripts are available on <a href="https://scripts.yt" aria-label="scripts dot Y T">scripts.yt</a>.
+                        <p>All of these userscripts are available on <a href="https://scripts.yt" aria-label="scripts dot Y T"><span aria-hidden="true">scripts.yt</span></a>.
                         <p>Feel free to contribute or open issues if you have improvements in mind!</p>
                     ',
                     image: '/img/projects/scriptsyt.png',
@@ -44,10 +45,10 @@
                         <p><a href="https://nonogram.me">My own nonogram web app</a> is currently in development.</p>
                         <p>
                             Anyone can upload their own creations which will then be held for review and later approved.
-                            It still lacks solvability calculation for submission verification which I previously implemented in a limited way
-                            but was very computationally expensive and didnt cover hard to solve nonograms so I needed to scrap it.
+                            It still lacks solvability calculation for submission verification which was previously implemented in a limited way
+                            but was too computationally expensive.
                         </p>
-                        <p>Disclaimer: not all nonograms are solvable and will be cleaned up in the future.</p>
+                        <p>Disclaimer: not all nonograms are solvable. They will be cleaned up in the future.</p>
                         <p>Development is currently slow and not prioritized. Sorry for the inconvenience!</p>
                     ',
                     image: '/img/projects/nonogramme.png',
@@ -92,6 +93,5 @@
                 </section>
             {% endfor %}
         </main>
-        {% include 'base/navigation.twig' %}
     </body>
 </html>

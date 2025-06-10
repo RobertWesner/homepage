@@ -2,9 +2,10 @@
 <html lang="en">
     <head>
         {% include 'base/head.twig' with { title: 'Robert Wesner - Home' } %}
-        <link rel="stylesheet" href="/css/view/index.css?1">
+        <link rel="stylesheet" href="/css/view/index.css?2">
     </head>
     <body>
+        {% include 'base/navigation.twig' with { current: 'main' } %}
         <div id="content">
             <div class="screen">
                 <div>
@@ -38,7 +39,7 @@
                         </p>
                         <p>
                             My language of choice is PHP 8+, though I do work with Java professionally as well.
-                            Despite being mainly a back end engineer, I also handle some front end work with Javascript and Typescript.
+                            Despite being mainly a back end developer, I also handle some front end work with Javascript and Typescript.
                             In my spare time I am familiarizing myself with Go, Kotlin, and Ruby.
                         </p>
                     </section>
@@ -49,7 +50,7 @@
                             more grand things in the background.
                         </p>
                         <p>
-                            One of my most popular projects can be found on <a href="https://scripts.yt" aria-label="scripts dot Y T">scripts.yt</a>,
+                            One of my most popular projects can be found on <a href="https://scripts.yt" aria-label="scripts dot Y T"><span aria-hidden="true">scripts.yt</span></a>,
                             a collection of useful userscripts for YouTube.
                             A slightly less useful but hopefully more impressive project is my <a href="https://github.com/Novara-PHP/psr7">PSR-7 implementation without the use of variables.</a>
                         </p>
@@ -65,7 +66,7 @@
                 href="https://www.reddit.com/user/RobertWesner/"
                 target="_blank"
                 style="--delay: 1.32s; background-color: #FF5700"
-                aria-label="Reddit profile available at reddit dot com slash U slash RobertWesner"
+                aria-label="Reddit profile at reddit dot com slash U slash RobertWesner"
             >
                 <i class="fa-brands fa-reddit fa-2x" aria-hidden="true"></i>
                 <span>
@@ -76,7 +77,7 @@
                 href="https://github.com/RobertWesner"
                 target="_blank"
                 style="--delay: 1s; background-color: #24292e"
-                aria-label="GitHub profile available at GitHub dot com slash RobertWesner"
+                aria-label="GitHub profile at GitHub dot com slash RobertWesner"
             >
                 <i class="fa-brands fa-github fa-2x" aria-hidden="true"></i>
                 <span>
@@ -84,6 +85,5 @@
                 </span>
             </a>
         </aside>
-        {% include 'base/navigation.twig' %}
     </body>
 </html>

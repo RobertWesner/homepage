@@ -15,18 +15,27 @@
     gap: 0.6rem;
 }
 
-#navigation > nav > a {
+#navigation > nav a {
     padding: 1rem;
     border-radius: 1rem;
     background-color: #24292e;
     text-align: right;
 }
 
-#navigation > nav > a:hover {
+#navigation > nav a:hover, #navigation > nav a:focus {
     background-color: #383e44;
 }
 
+#navigation > nav a[aria-current="page"] {
+    font-weight: bold;
+}
+
 @media only screen and (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     #navigation {
         position: static;
     }

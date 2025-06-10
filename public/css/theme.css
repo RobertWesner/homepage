@@ -1,9 +1,13 @@
 @import '/font/montserrat/Montserrat.css';
 @import '/node_modules/@fortawesome/fontawesome-free/css/all.css';
-@import 'navigation.css';
+@import 'navigation.css?2';
 
 * {
     box-sizing: border-box;
+}
+
+:focus {
+    outline: 3px solid magenta;
 }
 
 body {
