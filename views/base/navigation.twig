@@ -16,6 +16,16 @@
                 url: '/blog/',
                 text: 'Blog',
             },
+            {
+                id: 'imprint',
+                url: 'https://datenschutz.robertwesner.de/impressum',
+                text: 'Imprint',
+            },
+            {
+                id: 'privacy',
+                url: 'https://datenschutz.robertwesner.de/dataprotection',
+                text: 'Privacy',
+            },
         ] %}
             <a href="{{ page.url }}"{% if current == page.id %} aria-current="page"{% endif %}>
                 {{ page.text }}
